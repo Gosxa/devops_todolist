@@ -22,8 +22,8 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # Copy installed packages from build
-COPY --from=build /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
-COPY --from=build /usr/local/bin /usr/local/bin
+COPY --from=build /usr/local /usr/local
+
 
 # Copy application code
 COPY . .
